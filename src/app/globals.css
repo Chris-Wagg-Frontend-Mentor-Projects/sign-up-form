@@ -1,0 +1,101 @@
+html {
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+	margin: 0;
+}
+
+.box-shadow {
+	-webkit-box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 7px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.main-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-image: url('../../public/bg-intro-desktop.png');
+	background-color: hsl(0, 100%, 74%);
+
+	justify-items: center;
+	align-items: center;
+
+	height: 100vh;
+}
+
+.left-wrapper {
+	color: white;
+}
+
+.text-wrapper {
+	max-width: 50ch;
+	margin: 1rem;
+}
+
+.text-wrapper > h1 {
+	font-size: 3rem;
+	line-height: 1.1;
+}
+
+.text-wrapper > p {
+	font-size: 1rem;
+}
+
+.right-wrapper {
+	width: 100%;
+	/* margin: 1rem; */
+}
+
+.trial-message {
+	color: white;
+	background-color: hsl(248, 32%, 49%);
+	padding: 1rem 2rem;
+	text-align: center;
+	border-radius: 10px;
+
+	max-width: 30rem;
+	width: 100%;
+}
+
+form {
+	display: grid;
+	background-color: white;
+	padding: 2rem;
+	border-radius: 10px;
+	gap: 1rem;
+	max-width: 30rem;
+	width: 100%;
+}
+
+input {
+	padding: 1rem 2rem;
+	border-radius: 5px;
+	border: 1px solid gainsboro;
+}
+
+input::placeholder {
+	font-weight: 700;
+}
+
+button {
+	padding: 1rem;
+	color: white;
+	background-color: hsl(154, 59%, 51%);
+	border: 2px solid transparent;
+	border-radius: 10px;
+
+	font-weight: 600;
+}
+
+form > p {
+	font-size: 0.75rem;
+	color: rgb(170, 170, 170);
+	text-align: center;
+}
+
+a {
+	color: hsl(0, 100%, 74%);
+	text-decoration: none;
+	font-weight: 700;
+}

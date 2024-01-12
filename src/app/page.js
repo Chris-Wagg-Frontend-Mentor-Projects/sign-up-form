@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function Home() {
 	const [firstName, setFirstName] = useState('')
@@ -17,7 +17,7 @@ export default function Home() {
 		if (firstName == '') {
 			firstNameError.firstName = 'Please enter a first name'
 		}
-		console.log('missing first name')
+
 		setFirstNameError(firstNameError)
 	}
 	const validateLastName = () => {
@@ -26,7 +26,7 @@ export default function Home() {
 		if (lastName == '') {
 			lastNameError.lastName = 'Please enter a last name'
 		}
-		console.log('missing last name')
+
 		setLastNameError(lastNameError)
 	}
 	const validateEmail = () => {
@@ -37,7 +37,7 @@ export default function Home() {
 		} else if (!/\S+@\S+\.\S+/.test(email)) {
 			emailError.email = 'Please enter a valid email address. '
 		}
-		console.log('missing email')
+
 		setEmailError(emailError)
 	}
 	const validatePassword = () => {
@@ -46,7 +46,7 @@ export default function Home() {
 		if (password == '') {
 			passworderror.password = 'Please enter a password'
 		}
-		console.log('missing password')
+
 		setPasswordError(passworderror)
 	}
 
@@ -99,6 +99,7 @@ export default function Home() {
 						<p className='error-message'>
 							{firstNameError.firstName}
 							<svg
+								aria-hidden='true'
 								width='24'
 								height='24'
 								xmlns='http://www.w3.org/2000/svg'>
@@ -139,6 +140,7 @@ export default function Home() {
 						<p className='error-message'>
 							{lastNameError.lastName}
 							<svg
+								aria-hidden='true'
 								width='24'
 								height='24'
 								xmlns='http://www.w3.org/2000/svg'>
@@ -179,6 +181,7 @@ export default function Home() {
 						<p className='error-message'>
 							{emailError.email}
 							<svg
+								aria-hidden='true'
 								width='24'
 								height='24'
 								xmlns='http://www.w3.org/2000/svg'>
@@ -219,6 +222,7 @@ export default function Home() {
 						<p className='error-message'>
 							{passwordError.password}
 							<svg
+								aria-hidden='true'
 								width='24'
 								height='24'
 								xmlns='http://www.w3.org/2000/svg'>
